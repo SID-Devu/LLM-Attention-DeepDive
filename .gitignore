@@ -1,0 +1,42 @@
+# Compiled Object files
+*.o
+*.obj
+*.elf
+
+# Executables
+*.out
+*.exe
+build/
+bin/
+
+# HIP/ROCm artifacts
+*.hipfb
+*.hsaco
+
+# Profiling outputs
+*.rocprof
+profiling/*.json
+*.nsys-rep
+*.qdrep
+
+# Results
+results/*.json
+results/*.csv
+!results/example_*.json
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
+Thumbs.db

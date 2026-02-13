@@ -1,0 +1,32 @@
+# ROCm Profiler Hardware Counter Configuration
+# Use with: rocprof --input rocprof_counters.txt -o output.csv ./program
+
+# Memory counters
+pmc: FETCH_SIZE, WRITE_SIZE
+
+# Cache counters  
+pmc: L2CacheHit, TCP_TCC_READ_REQ_sum, TCP_TCC_WRITE_REQ_sum
+
+# Occupancy metrics
+pmc: GRBM_COUNT, GRBM_GUI_ACTIVE
+
+# ALU utilization
+pmc: SQ_WAVES, SQ_INSTS_VALU, SQ_INSTS_SALU
+
+# LDS (Local Data Share / Shared Memory)
+pmc: SQ_INSTS_LDS, SQ_LDS_BANK_CONFLICT
+
+# Memory bandwidth
+pmc: TCC_HIT_sum, TCC_MISS_sum, TCC_EA_RDREQ_sum, TCC_EA_WRREQ_sum
+
+# Compute unit activity
+pmc: GRBM_CP_BUSY, GRBM_SPI_BUSY
+
+# Instruction mix
+pmc: SQ_INSTS_FLAT, SQ_INSTS_FLAT_LDS_ONLY
+
+# Vector memory
+pmc: SQ_INSTS_VMEM_WR, SQ_INSTS_VMEM_RD, SQ_WAIT_INST_VMEM
+
+# Scalar memory
+pmc: SQ_INSTS_SMEM
